@@ -19,9 +19,11 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
             width: 100%;
+            height: 100vh;
             position: relative;
+            margin: 0;
+            border-radius: 0;
         }
         .close-btn {
             position: absolute;
@@ -33,46 +35,54 @@
             padding: 5px 10px;
             cursor: pointer;
             border-radius: 5px;
+            z-index: 1000;
         }
         .toggle-btn {
-            margin-top: 20px;
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
             background-color: #007bff;
             border: none;
             color: #fff;
             padding: 10px;
             cursor: pointer;
             border-radius: 5px;
+            z-index: 1000;
         }
         .info {
             display: none;
-            margin-top: 20px;
+            position: fixed;
+            bottom: 70px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 500px;
+            z-index: 1000;
         }
         iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            height: 600px;
-        }
-        @media (max-width: 768px) {
-            .container {
-                width: 100%;
-                height: 100vh;
-                margin: 0;
-                border-radius: 0;
-            }
-            iframe {
-                height: 80vh;
-            }
+            height: 100%;
+            border: none;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <button class="close-btn" onclick="window.location.href='https://www.vendeygana.net/user/'">X</button>
-        <iframe src="https://fluidforms.co/embed/form?id=679d0645f0f65db069ba44d7" frameborder="0"></iframe>
+        <iframe src="https://online.forms.app/respuestasdereportesdefa/inter" frameborder="0"></iframe>
         <button class="toggle-btn" onclick="toggleInfo()">¿COMO CONSULTO MI SALDO?</button>
         <div class="info">
             <p>Contamos con varias opciones para tu consulta:</p>
             <ul>
-                <li>Ingresando en <a href="https://mi.inter.com.ve" target="_blank">mi.inter.com.ve</a> opción “Consulta Saldo”.</li>
+                <li>Ingresando en <a href="https://mi.inter.com.ve" target="_blank">mi.inter.com.ve</a> opción "Consulta Saldo".</li>
                 <li>Enviando un SMS al 22625 escribiendo INTER SALDO y tu ID de cliente.</li>
                 <li>Vía Telefónica 0500INTER00-(05004683700) marcando opción 1 donde te brindamos la información automatizada.</li>
             </ul>
